@@ -47,6 +47,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.collectionView.delegate = self
         setUpCollectionView()
         
     }
@@ -312,3 +313,8 @@ struct User: Hashable {
     }
 }
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+    }
+}
