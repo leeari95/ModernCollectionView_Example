@@ -11,6 +11,34 @@ class ViewController: UIViewController {
     
     let mainView = MainView()
     var dataSource: UICollectionViewDiffableDataSource<Section, User>!
+    var snapshot: NSDiffableDataSourceSnapshot<Section, User>!
+    
+    var items = [
+        User(name: "mic"),
+        User(name: "mic.fill"),
+        User(name: "message", stock: "품절"),
+        User(name: "message.fill", stock: "품절"),
+        User(name: "sun.min", baganPrice: ""),
+        User(name: "sun.min.fill"),
+        User(name: "sunset", baganPrice: ""),
+        User(name: "sunset.fill", baganPrice: ""),
+        User(name: "pencil", baganPrice: ""),
+        User(name: "pencil.circle"),
+        User(name: "highlighter"),
+        User(name: "pencil.and.outline"),
+        User(name: "personalhotspot"),
+        User(name: "network"),
+        User(name: "icloud"),
+        User(name: "icloud.fill"),
+        User(name: "car"),
+        User(name: "car.fill"),
+        User(name: "bus"),
+        User(name: "bus.fill"),
+        User(name: "flame"),
+        User(name: "flame.fill"),
+        User(name: "bolt"),
+        User(name: "bolt.fill")
+    ]
     
     override func loadView() {
         super.loadView()
@@ -41,6 +69,13 @@ class ViewController: UIViewController {
             
             return cell
         }
+        
+        // 데이터소스에 넣을 데이터를 Snapshot을 이용하여 컬렉션뷰에 데이터를 제공한다.
+        snapshot = NSDiffableDataSourceSnapshot<Section, User>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(items, toSection: .main)
+        
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
 
