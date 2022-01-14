@@ -116,6 +116,8 @@ class MyListCell: UICollectionViewListCell {
         
         if myContentView.stockLabel.text == "품절" { // 품절 시 글씨 색깔 바꾸기
             myContentView.stockLabel.textColor = .systemOrange
+        } else {
+            myContentView.stockLabel.textColor = .systemGray
         }
         if myContentView.baganPriceLabel.text != "" { // 세일가격이 존재한다면 글씨스타일 수정
             let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: "USD 1,234")
@@ -129,6 +131,7 @@ class MyListCell: UICollectionViewListCell {
             myContentView.priceLabel.textColor = .systemRed
             
         } else { // 세일가격이 존재하지 않다면 해당 레이블 숨김처리
+            myContentView.priceLabel.text = item?.price
             myContentView.baganPriceLabel.isHidden = true
         }
             
