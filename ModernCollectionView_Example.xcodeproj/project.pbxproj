@@ -15,6 +15,7 @@
 		9A9606002791621700FA9E47 /* ModernCollectionView_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9605FF2791621700FA9E47 /* ModernCollectionView_ExampleUITests.swift */; };
 		9A9606022791621700FA9E47 /* ModernCollectionView_ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9606012791621700FA9E47 /* ModernCollectionView_ExampleUITestsLaunchTests.swift */; };
 		9A96060F27916F3E00FA9E47 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96060E27916F3E00FA9E47 /* Network.swift */; };
+		9A960611279170B200FA9E47 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A960610279170B200FA9E47 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9A9605FF2791621700FA9E47 /* ModernCollectionView_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernCollectionView_ExampleUITests.swift; sourceTree = "<group>"; };
 		9A9606012791621700FA9E47 /* ModernCollectionView_ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernCollectionView_ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A96060E27916F3E00FA9E47 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		9A960610279170B200FA9E47 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9A96060E27916F3E00FA9E47 /* Network.swift */,
+				9A960610279170B200FA9E47 /* MainView.swift */,
 				9A9605DE2791621700FA9E47 /* AppDelegate.swift */,
 				9A9605E02791621700FA9E47 /* SceneDelegate.swift */,
 				9A9605E22791621700FA9E47 /* ViewController.swift */,
@@ -256,6 +259,7 @@
 				9A9605E32791621700FA9E47 /* ViewController.swift in Sources */,
 				9A9605DF2791621700FA9E47 /* AppDelegate.swift in Sources */,
 				9A96060F27916F3E00FA9E47 /* Network.swift in Sources */,
+				9A960611279170B200FA9E47 /* MainView.swift in Sources */,
 				9A9605E12791621700FA9E47 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
