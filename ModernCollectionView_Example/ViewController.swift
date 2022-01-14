@@ -180,7 +180,7 @@ class MyContentView: UIView, UIContentView { // 셀 내부를 구성하는 콘�
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.spacing = 5
+        stackView.spacing = 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -188,6 +188,7 @@ class MyContentView: UIView, UIContentView { // 셀 내부를 구성하는 콘�
     var imageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.tintColor = .black
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -282,7 +283,7 @@ class MyContentView: UIView, UIContentView { // 셀 내부를 구성하는 콘�
         bottomStackView.addArrangedSubview(priceLabel)
         bottomStackView.addArrangedSubview(baganPriceLabel)
         
-        let imageViewHeight = imageView.heightAnchor.constraint(equalToConstant: 43)
+        let imageViewHeight = imageView.heightAnchor.constraint(equalToConstant: 45)
         imageViewHeight.priority = .defaultHigh
         NSLayoutConstraint.activate([
             backgroundStackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
@@ -290,7 +291,7 @@ class MyContentView: UIView, UIContentView { // 셀 내부를 구성하는 콘�
             backgroundStackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
             backgroundStackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
             imageViewHeight,
-            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 1/1)
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 1.5/1)
         ])
 
     }
