@@ -10,7 +10,7 @@ import UIKit
 class MainView: UIView {
     
     lazy var collectionView: UICollectionView = {
-        let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -31,12 +31,12 @@ class MainView: UIView {
     }
     
     func setUp() {
-        backgroundColor = .blue
+        backgroundColor = .systemBackground
     }
     
     func setUpSubViews() {
         addSubview(collectionView)
-        
+
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
